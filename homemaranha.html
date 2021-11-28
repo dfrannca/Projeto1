@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="projeto1.css" media="screen">
+    <title>Geekly</title>
+</head>
+<body>
+    <img id="img" src="https://i.ibb.co/gdtyDVK/Geekly.jpg" width=250 height=250 >
+    <br>
+    <br>
+    <fieldset class="barras" style = "width: 55%"> 
+        <nav> 
+            <div class = "topnav"> 
+                <div><a class="cr" href="projeto1.html">Notícias</a></div>
+                <div><a class="cr" href="quiz.html">Quiz</a></div>
+                <div><a class="cr" href="lista.html">Listas</a></div>
+                <div><a class="cr" href="cadastro.html">Cadastro</a></div>
+                <div><a class="cr" href="login.html">Login</a></div>
+            </div>    
+        </nav>      
+    </fieldset>
+
+    <br>
+    <fieldset class="barras1">
+        <center> 
+        <br>
+        <h1>Homem-Aranha: Sem Volta para Casa</h1>
+        <h3>Pré-venda começa no dia 29 de novembro</h3>
+        <br>
+        <img src="https://jpimg.com.br/uploads/2021/08/design-sem-nome-2021-08-23t164811.980.jpg" width=500 height=300></a>
+        <br>
+        <br>
+        <p>
+            Pela primeira vez na história cinematográfica do Homem-Aranha, nosso herói amigo da vizinhança é desmascarado     
+        <br>
+        e não consegue mais separar sua vida normal dos grandes riscos de ser um super-herói. 
+        <br>
+        Quando ele pede ajuda ao Doutor Estranho, os riscos se tornam ainda mais perigosos,  
+        <br>
+        e o forçam a descobrir o que realmente significa ser o Homem-Aranha.”
+        <br>
+        As versões de outras plataformas não estão tão longe. 
+        <br>
+        Homem-Aranha: Sem Volta Para Casa estreia em 16 de dezembro de 2021 no Brasil.    
+        </p>
+        <br>
+        </center>
+    </fieldset>
+    <br>
+    
+    <table name = "tab" class="barras1" id="comentario" style="color:white;"> 
+        <br>
+       
+        <td> 
+            <h2>Comentários:</h2> 
+            <h3></h3>  
+        </td>
+        <tr> 
+            <td><h3><p id="z_nome"></p></h3></td>   
+            <td><h4><p id="z_coment"></p></h4></td>    
+        </tr>
+            
+        
+    </table>
+
+    <br>
+    <fieldset class="barras1"> 
+         
+        <br>
+        <h1 style="margin-left: 19px;">Comentar:</h1> 
+        <br>
+        <form name ="co" method="GET">
+            <div> 
+                <label><strong>Nome:</strong></label><br>
+                <br>
+                <input class="cr1" type="text" name="nom" id = "nome" style="background-color: white; margin-left: 132px;"/><br><br>
+            <div style="margin-top: -7%;"> 
+                <label style="margin-left: -30px;"><strong>Comentário:</strong></label><br>
+                <br>
+                <br>
+                <textarea class ="cr1" name="coment" id="coment" style="background-color:white ; margin-left: 90px;"></textarea><br /><br />
+            </div>
+            
+            <input class="bot" style="margin-left: 49%; margin-top: -10%;" type="button" onclick="armazenardados()" value="Enviar" > 
+            <input class="bot" style="margin-left: 9%; margin-top: -10%;" type="reset" value="Limpar">
+            <script>
+                function armazenardados() 
+                {
+                   
+                    var z_nome = document.getElementById("nome").value; 
+                    var z_coment = document.getElementById("coment").value;
+                    
+        
+                    var table = document.getElementsByName('tab')[0];
+                    var newRow = table.insertRow(1);
+                    var celnome = newRow.insertCell(0);
+                    var celcoment = newRow.insertCell(1);
+                    
+        
+                    celnome.innerHTML =  z_nome;
+                    celcoment.innerHTML = z_coment;
+                    
+                }
+        
+            </script>
+
+        
+        </form>
+
+        
+
+    </fieldset>   
+    
+    <br>
+
+
+
+
+</body>
+</html>
