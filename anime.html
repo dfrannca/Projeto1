@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="projeto1.css" media="screen">
+    
+    <title>Geekly</title>
+</head>
+<body>
+    <img id="img" src="https://i.ibb.co/gdtyDVK/Geekly.jpg" width=250 height=250 >
+    <br>
+    <br>
+    <fieldset class="barras" style = "width: 55%"> 
+        <nav> 
+            <div class = "topnav"> 
+                <div><a class="cr" href="projeto1.html">Notícias</a></div>
+                <div><a class="cr" href="quiz.html">Quiz</a></div>
+                <div><a class="cr" href="lista.html">Listas</a></div>
+                <div><a class="cr" href="cadastro.html">Cadastro</a></div>
+                <div><a class="cr" href="login.html">Login</a></div>
+            </div>    
+        </nav>      
+    </fieldset>
+    <br>
+    <fieldset class="barras1"> 
+        <center> 
+        <form name ="co" method="GET">
+            <br>
+            <strong><h3>Que Anime é esse?</h3></strong>
+            <br>
+            
+            <label>
+                <br>
+                <img src="https://img.olhardigital.com.br/wp-content/uploads/2021/04/dragon-ball-z.png" width=300 height=250>
+                <br>
+                <input type="radio" name="quiz" id="op" value= 0>One Piece   
+                <br>
+                <input type="radio" name="quiz" id="nt1"  value= 0>Naruto
+                <br>
+                <input type="radio" name="quiz" id="db"  value= 1>Dragon Ball
+                <br>
+                <input type="radio" name="quiz" id="bl1"  value= 0>Bleach
+                <br>
+            </label>
+            <label>     
+                <br>
+                <img src="https://img.olhardigital.com.br/wp-content/uploads/2021/08/Pegasus_forever.jpg" width=300 height=250>
+                <br>
+                <input type="radio" name="quiz1" id="cz1"  value= 1>Cavaleiros do Zodiaco   
+                <br>
+                <input type="radio" name="quiz1" id="yyh"  value= 0>Yu Yu hakusho 
+                <br>
+                <input type="radio" name="quiz1" id="sx"  value= 0>Samurai X
+                <br>
+                <input type="radio" name="quiz1" id="hh"  value= 0>Hunter x Hunter
+                <br>
+            </label> 
+            <label>     
+                <br>
+                <img src="https://images.nintendolife.com/ad03f8a9628b9/pokemon-television-series.900x.jpg" width=300 height=250>
+                <br>
+                <input type="radio" name="quiz2" id="dg1"  value= "0" >Digimon  
+                <br>
+                <input type="radio" name="quiz2" id="pk1"  value= 1>Pokémon 
+                <br>
+                <input type="radio" name="quiz2" id="ygo1"  value= 0>Yu-gi-oh
+                <br>
+                <input type="radio" name="quiz2" id="bb1"  value= 0 >Beyblade
+                <br>
+            </label>  
+            <label>     
+                <br>
+                <img src="https://t8j5n5j3.rocketcdn.me/wp-content/uploads/2020/08/digimon-adventure-historia-personagens-sucesso-e-reboot-1024x539.jpg" width=300 height=250>
+                <br>
+                <input type="radio" name="quiz3" id="bl"  value= 0>Bleach 
+                <br>
+                <input type="radio" name="quiz3" id="cz"  value= 0>Cavaleiros do Zodiaco 
+                <br>
+                <input type="radio" name="quiz3" id="nt"  value= 0>Naruto
+                <br>
+                <input type="radio" name="quiz3" id="dg"  value= 1>Digimon
+                <br>
+            </label>    
+            <label>     
+                <br>
+                <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/d64f9bd173883176387813ad471c4340ccf373b6949fbdb3befcb610c744e2bc._RI_.jpg" width=300 height=250>
+                <br>
+                <input type="radio" name="quiz4" id="bb"  value= 0 >Beyblade 
+                <br>
+                <input type="radio" name="quiz4" id="dn"  value= 0 >Death Note 
+                <br>
+                <input type="radio" name="quiz4" id="bk"  value= 1 >Bakugan
+                <br>
+                <input type="radio" name="quiz4" id="ygo"  value= 0 >Yu-gi-oh
+                <br>
+
+            </label>  
+            <br>
+            <input class="bot" style="margin-left: 49%; margin-top: -2%;" type="button" onclick="somar()" value="Confirmar" > 
+            <input class="bot" style="margin-left: 9%; margin-top: -3%;" type="reset" value="Limpar">
+		</select>
+        <script>
+            function somar() 
+            {
+                let quiz = document.forms[0];
+                let txt=""; 
+                let a; 
+		        var num = 0;
+
+                
+                for(a=0;a<quiz.length;a++)
+                {
+                    if(quiz[a].checked)
+                    {
+                        /*txt = txt + quiz[a].value + "";*/
+                    	num = parseInt(num) + parseInt(quiz[a].value);
+		            }
+
+                } 
+
+               
+                document.getElementById("result").value = num;
+                
+                
+                /*var num = 0.0;
+            
+                var quiz = document.getElementsByName("quiz").value;
+                var quiz1 = document.getElementsByName("quiz1").value;
+                var quiz2 = document.getElementsByName("quiz2").value;
+                var quiz3 = document.getElementsByName("quiz3").value;
+                var quiz4 = document.getElementsByName("quiz4").value;
+              
+                var total = Number(quiz) + Number(quiz1) + Number(quiz2) + Number(quiz3) + Number(quiz4);*/
+
+                
+            }
+    
+        </script>
+        </form>
+        <br>
+        
+        </center>
+    </fieldset>
+    <br>
+    <table name = "tab" class="barras1" id="resultado" > 
+        <br>
+        <td> 
+            <h3>Resultado:</h3>
+        </td>
+        <tr>
+            <td><h3><input  id="result" class = "barras2" readonly disabled <p>/5</p></h3></td>
+        </tr>
+        
+        <br>
+    </table>
+</body>
+</html>
