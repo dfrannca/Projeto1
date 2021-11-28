@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<form name ="cadastro" id = "cad "method="GET">
+    <link rel="stylesheet" type="text/css" href="projeto1.css" media="screen">
+    <title>Geekly</title>
+</head>
+<body>
+    
+    <img id="img" src="https://i.ibb.co/gdtyDVK/Geekly.jpg" width=250 height=250 >
+    <br>
+    <br>
+    <fieldset class="barras" style = "width: 55%"> 
+        <nav> 
+             
+            <div class = "topnav"> 
+                <div><a class="cr" href="projeto1.html">Notícias</a></div>
+                <div><a class="cr" href="quiz.html">Quiz</a></div>
+                <div><a class="cr" href="lista.html">Listas</a></div>
+                <div><a class="cr" href="cadastro.html">Cadastro</a></div>
+                <div><a class="cr" href="login.html">Login</a></div>
+            </div> 
+           
+        </nav>      
+    </fieldset>
+
+    <br>
+    
+    <fieldset class="barras1">
+        <form name ="cadastro" id = "cad "method="GET">
+            <br>
+                     
+            <center> 
+            <h1><strong>Cadastro</strong></h1>
+            </center>
+
+            <center> 
+            <br>
+            <label><strong>E-mail:</strong></label>
+            <input type="email" class="email" id="email" >
+            <br>
+            <br>
+            <label><strong>Usuário(no mínimo 6 caracteres):</strong></label>
+            <input type="text" minlength="6"  class="user" id="user" >
+            <br>
+            <br>
+            <label><strong>Senha(no mínimo 8 caracteres):</strong></label>
+            <input type="password" minlength="8" class="senha" id="senha">
+            <br>
+            </center>    
+        <br>
+        <br>
+        <center> 
+        <div> 
+            <div>
+                <input class="cr2" type="button" onclick="salvardados()" value="Salvar">
+            <div>    
+                <input class="cr2" type="reset" value="Limpar"><br/><br/> 
+        </div>        
+	    </center>
+        <br>  
+	    <br>
+            <script>
+                function salvardados()
+                 {
+                    var user = document.getElementById("user").value;
+                    var senha = document.getElementById("senha").value;
+
+                    if(user.length < "6" || senha.length < "8")
+                    {
+                        alert("Cadastro Inválido! número mínimo de caracteres não atingído.");
+                    }
+                    else 
+                        alert("Cadastro efetuado com sucesso!");
+                }
+            </script>
+
+
+        </form>
+    </fieldset>
+    <br>
+</body>
+</html>
